@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ディープラーニングの応用 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">ディープラーニングの応用</h2>
+            <p>ディープラーニング（深層学習）は、機械学習の一分野であり、ニューラルネットワークを多層化することで複雑な特徴を自動的に抽出する技術です。画像や音声、自然言語など多様なデータに適用でき、人工知能の発展を支える中心的な手法となっています【426422423045204†L86-L104】。</p>
+
+            <h3>仕組みの概略</h3>
+            <p>ディープラーニングは、人間の脳の神経回路網を模倣したニューラルネットワークの一種であり、入力層・隠れ層・出力層から成ります【426422423045204†L91-L104】。隠れ層が複数重なることで、入力データの抽象度の高い特徴を段階的に捉えることができるようになります【426422423045204†L105-L112】。</p>
+
+            <h3>代表的なモデル</h3>
+            <p>ディープラーニングには目的に応じてさまざまなアーキテクチャが提案されています。たとえば、畳み込みニューラルネットワーク（CNN）は画像認識で高い性能を発揮し、入力画像から局所的な特徴を効率的に抽出します【426422423045204†L117-L121】。リカレントニューラルネットワーク（RNN）は系列データの処理に適しており、時間的な依存関係を捉えることができます。さらに、敵対的生成ネットワーク（GAN）は画像生成などに用いられます。</p>
+
+            <h3>応用例</h3>
+            <p>ディープラーニングは以下のような分野で活用されています。</p>
+            <ul>
+                <li><strong>画像認識</strong>: 写真や医療画像から対象を分類・検出する。</li>
+                <li><strong>音声認識</strong>: 音声信号から文字列への変換や、話者認識。</li>
+                <li><strong>自然言語処理</strong>: 翻訳や要約、質問応答など。</li>
+                <li><strong>異常検知</strong>: センサー情報や監視カメラ映像から異常なパターンを検出する。</li>
+            </ul>
+
+            <figure>
+                <img src="assets/deep_learning_applications.png" alt="ディープラーニング応用例のバーチャート" />
+                <figcaption>図1: ディープラーニング応用例と性能（イメージ）。各分野で高い精度が報告されている。</figcaption>
+            </figure>
+
+            <h3>注意点</h3>
+            <p>ディープラーニングは大量のデータと計算資源を必要とし、モデルの解釈性が低い（いわゆるブラックボックス問題）などの課題があります。これらの問題に対処するために、少量データで学習するための転移学習や、モデルの説明性を向上させる研究も進められています。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

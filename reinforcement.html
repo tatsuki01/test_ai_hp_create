@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>強化学習の基礎 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">強化学習の基礎</h2>
+            <p>強化学習は、エージェントが環境と相互作用しながら試行錯誤を通じて最適な行動を学習する手法です。教師あり学習とは異なり、正解を与えられるのではなく、行動の結果として得られる報酬から学習します【100462498912025†L60-L80】。</p>
+
+            <h3>強化学習のプロセス</h3>
+            <p>エージェントは環境から状態 <em>state</em> を受け取り、行動 <em>action</em> を選択します。環境はその行動に応じて次の状態と報酬 <em>reward</em> を返します。この報酬を最大化するように、エージェントは方策 <em>policy</em> を改善していきます【100462498912025†L60-L90】。</p>
+            <p>報酬は正（ポジティブ）または負（ネガティブ）で与えられ、エージェントは長期的に受け取る報酬の総和を最大にする行動方針を学習します【100462498912025†L60-L90】。</p>
+
+            <figure>
+                <img src="assets/reinforcement_diagram.png" alt="強化学習の状態遷移図" />
+                <figcaption>図1: 強化学習の状態遷移図。矢印はエージェントの行動に伴う状態の遷移と報酬を示す。</figcaption>
+            </figure>
+
+            <h3>主なアルゴリズム</h3>
+            <table class="table-small">
+                <thead>
+                    <tr><th>カテゴリ</th><th>代表的な手法</th><th>特徴</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>価値ベース</td><td>Q 学習、SARSA</td><td>状態–行動価値を学習し、最大価値を選択する。</td></tr>
+                    <tr><td>方策ベース</td><td>REINFORCE、方策勾配法</td><td>方策自体を直接最適化し、連続行動空間にも適用可能。</td></tr>
+                    <tr><td>アクター–クリティック</td><td>A2C、A3C</td><td>アクターが方策を決定し、クリティックが価値を評価する。</td></tr>
+                </tbody>
+            </table>
+            <p>強化学習はゲームや自動運転、ロボット制御など多くの分野で応用され、深層学習と組み合わせた手法が高い性能を示しています。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

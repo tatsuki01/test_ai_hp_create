@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ニューラルネットワーク入門 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">ニューラルネットワーク入門</h2>
+            <p>ニューラルネットワークは、生物の脳の神経回路を模した計算モデルで、入力から出力までの複数の層で構成されます。各層には複数のノード（ニューロン）があり、それらが重み付き結合によって接続されています。</p>
+
+            <h3>基本構造</h3>
+            <p>一般的なニューラルネットワークは入力層、1つ以上の隠れ層、出力層からなります。各層のニューロンは前層の出力を受け取り、線形変換と活性化関数によって処理します。このように全体として<strong>入出力を結び付ける大きな関数</strong>として捉えられます【268415336275373†L95-L116】。</p>
+            <p>隠れ層が多層にわたる場合を特に<strong>ディープニューラルネットワーク</strong>と呼び、深層学習（ディープラーニング）の基盤となっています【268415336275373†L95-L116】。</p>
+
+            <figure>
+                <img src="assets/neural_network.png" alt="ニューラルネットワーク図" />
+                <figcaption>図1: シンプルなニューラルネットワーク構造</figcaption>
+            </figure>
+
+            <h3>学習の仕組み</h3>
+            <p>ニューラルネットワークの学習は、与えられた入力データと正解ラベルから<strong>損失関数</strong>を計算し、その値を最小にするように重みを調整するプロセスです。誤差逆伝播法（バックプロパゲーション）により、損失関数の勾配をネットワーク全体に伝え、効率よく重みを更新します。</p>
+
+            <h3>浅層ネットワークと深層ネットワーク</h3>
+            <table class="table-small">
+                <thead>
+                    <tr><th>種類</th><th>特徴</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>浅層ネットワーク</td><td>隠れ層が1層のみ。シンプルな問題を扱うのに適している。</td></tr>
+                    <tr><td>深層ネットワーク</td><td>隠れ層が多数あり、高度な表現学習が可能【268415336275373†L95-L116】。</td></tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

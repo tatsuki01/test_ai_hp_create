@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>サポートベクターマシン | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">サポートベクターマシン（SVM）</h2>
+            <p>サポートベクターマシン（SVM）は、主に分類問題に用いられる教師あり学習アルゴリズムです。特徴空間においてクラスを分割する超平面を求め、そのマージン（境界から各クラスまでの距離）を最大化することで汎化性能を高めます【287223166781627†L14-L46】。</p>
+
+            <h3>基本原理</h3>
+            <p>SVMはデータ点から<strong>サポートベクトル</strong>と呼ばれる特徴的な点を選び、その点で定義される境界線を決定します。分類境界線は、クラス間のマージンを最大化するように選ばれ、サポートベクトル以外の点は境界線に影響を与えません【287223166781627†L14-L46】。</p>
+
+            <h3>カーネル法</h3>
+            <p>線形分離できない場合でも、SVMはカーネル法を用いて入力空間を高次元の特徴空間に写像し、線形分類を実現します。よく用いられるカーネルには、<strong>線形カーネル</strong>、<strong>多項式カーネル</strong>、<strong>RBF（ガウス）カーネル</strong>があります【287223166781627†L68-L91】。</p>
+
+            <figure>
+                <img src="assets/svm_classification.png" alt="SVM分類例" />
+                <figcaption>図1: 線形カーネルによるSVM分類例。黒丸がサポートベクトル。</figcaption>
+            </figure>
+
+            <h3>線形 SVM とカーネル SVM の比較</h3>
+            <table class="table-small">
+                <thead>
+                    <tr><th>種類</th><th>特徴</th><th>用途</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>線形SVM</td><td>特徴空間が線形分離可能な場合に使用。計算が比較的軽い。</td><td>テキスト分類など高次元・疎な特徴に適する。</td></tr>
+                    <tr><td>カーネルSVM</td><td>カーネル関数により非線形な分離境界を構成【287223166781627†L68-L91】。</td><td>画像認識など複雑なパターンの識別。</td></tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

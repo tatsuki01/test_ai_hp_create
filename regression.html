@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>回帰分析と線形モデル | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">回帰分析と線形モデル</h2>
+            <p>回帰分析は、ある変数（目的変数）が他の変数（説明変数）とどのような関係にあるかを明らかにするための手法です。目的変数を予測するために、線形関係や非線形関係をモデル化します。</p>
+
+            <h3>回帰分析の概要</h3>
+            <p>最も基本的な<strong>単回帰</strong>では、1 つの説明変数を用いて目的変数を予測します。この場合、モデルは \(y = a x + b\) の形で表されます【499011224948310†L79-L92】。説明変数が複数ある場合は<strong>重回帰</strong>と呼ばれ、複数の変数を組み合わせて目的変数を説明します【499011224948310†L79-L92】。</p>
+            <p>回帰分析では、説明変数と目的変数の関係の強さや方向を示す推定係数を求め、その係数が統計的に有意であるかを検定します。また、回帰モデルの適合度を確認するために決定係数（R<sup>2</sup>）などの指標を用います。</p>
+
+            <h3>実例: 人工データを用いた回帰</h3>
+            <p>下図は人工的に生成したデータに対し、最小二乗法で求めた回帰直線を重ねた例です。青い点はデータ点、赤い線は推定した回帰直線です。回帰係数によって直線の傾きや切片が決まり、データの傾向を表します。</p>
+            <figure>
+                <img src="assets/regression_plot.png" alt="回帰分析の例" />
+                <figcaption>図1: 散布図と回帰直線の例</figcaption>
+            </figure>
+
+            <h3>単回帰と重回帰の比較</h3>
+            <table class="table-small">
+                <thead>
+                    <tr><th>モデル</th><th>数式</th><th>特徴</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>単回帰</td><td>\(y = a x + b\)</td><td>1 つの説明変数で目的変数を予測【499011224948310†L79-L92】</td></tr>
+                    <tr><td>重回帰</td><td>\(y = a_1 x_1 + a_2 x_2 + \cdots + b\)</td><td>複数の説明変数を組み合わせて予測。モデルの自由度が高くなる。</td></tr>
+                </tbody>
+            </table>
+
+            <p>回帰分析は経済学や自然科学、機械学習などさまざまな分野で利用されており、モデルの仮定を理解しながら活用することが重要です。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

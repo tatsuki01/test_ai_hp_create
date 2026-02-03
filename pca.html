@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>主成分分析（PCA） | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">主成分分析（PCA）</h2>
+            <p>主成分分析（Principal Component Analysis: PCA）は、多くの変数を持つデータをより少ない次元で表現するための教師なし学習手法です。元の変数を線形変換することで、新しい軸（主成分）に沿ってデータの分散を最大化します。</p>
+
+            <h3>PCA の基本</h3>
+            <p>PCA は、データをより少ない次元に圧縮することで可視化やノイズ除去を行います。文献では「次元削減の最も基本的な手法」「多変量データをより少数のパラメータに圧縮」「データをより少ない軸で説明するための座標回転」といった特徴が挙げられています【471792294869526†L65-L75】。</p>
+            <p>主成分は互いに直交しており、第1 主成分はデータの分散を最もよく説明する方向、第2 主成分は第1 主成分と直交し次に分散を説明する方向を表します。データをこれらの主成分に射影することで、元の次元数を減らして重要な構造を捉えることができます。</p>
+
+            <figure>
+                <img src="assets/pca_example.png" alt="PCA の例" />
+                <figcaption>図1: 2 次元データに対する PCA。赤と緑の矢印は主成分方向を示す。</figcaption>
+            </figure>
+
+            <h3>手順と応用</h3>
+            <ol>
+                <li>データを平均0にセンタリングする。</li>
+                <li>共分散行列を計算し、固有値と固有ベクトルを求める。</li>
+                <li>固有値の大きい順に固有ベクトルを並べ、上位 <em>k</em> 個を主成分として採用する。</li>
+                <li>データをこれらの主成分に射影し、新しい低次元表現を得る。</li>
+            </ol>
+            <p>PCA は次元削減だけでなく、ノイズ除去やデータの可視化、特徴抽出にも利用されます。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

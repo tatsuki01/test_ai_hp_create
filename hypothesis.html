@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仮説検定と p 値 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">仮説検定と p 値</h2>
+            <p>仮説検定は、観測されたデータが偶然のばらつきによるものか、それとも本質的な差が存在するのかを判断するための統計手法です。ここでは仮説検定の基本的な流れと、p 値の解釈について説明します。</p>
+
+            <h3>仮説検定の基本手順</h3>
+            <p>一般的な仮説検定では、まず<strong>帰無仮説</strong> \(H_0\) と対立仮説 \(H_1\) を設定します。帰無仮説は「差がない」「効果がない」などの主張であり、対立仮説はそれに対する代替仮説です。次に、サンプルデータから検定統計量と p 値を計算し、あらかじめ定めた有意水準と比較して帰無仮説を棄却するかどうかを判断します【137639525718349†L92-L116】。</p>
+            <p>検定統計量には t 値や z 値などがあり、標準正規分布や t 分布など既知の分布を用いて p 値を求めます。p 値は「帰無仮説が真であるときに、現在のデータ以上に極端な結果が得られる確率」を意味し、この値が有意水準より小さい場合に帰無仮説を棄却します【137639525718349†L92-L116】。</p>
+
+            <h3>p 値の解釈</h3>
+            <p>p 値はデータとモデルの不一致の程度を示す指標であり、p 値が小さいほど帰無仮説の下では起こりにくいデータが得られたことを意味します。ただし、p 値そのものが帰無仮説の真偽を直接示すわけではなく、有意水準の設定や検定の前提を考慮しながら解釈する必要があります。</p>
+
+            <figure>
+                <img src="assets/hypothesis_test.png" alt="仮説検定の標準正規分布" />
+                <figcaption>図1: 標準正規分布における両側検定の棄却域（赤色）</figcaption>
+            </figure>
+
+            <h3>代表的な検定と有意水準</h3>
+            <table class="table-small">
+                <thead>
+                    <tr><th>検定</th><th>用途</th><th>有意水準の例</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>z 検定</td><td>母分散が既知のときの平均の検定</td><td>0.05, 0.01</td></tr>
+                    <tr><td>t 検定</td><td>母分散が未知のときの平均の検定</td><td>0.05, 0.01</td></tr>
+                    <tr><td>カイ二乗検定</td><td>カテゴリーデータの適合度検定</td><td>0.05</td></tr>
+                </tbody>
+            </table>
+
+            <p>正しい仮説検定を行うためには、データの分布や検定の前提を理解し、得られた p 値を適切に解釈することが重要です。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
