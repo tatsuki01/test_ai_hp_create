@@ -1,0 +1,195 @@
+/* Global styles */
+:root {
+    --primary-color: #0f62fe;      /* IBM blue for a modern feel */
+    --secondary-color: #e5f0ff;    /* Light blue background for cards */
+    --dark-color: #0a192f;         /* Dark base for header and footer */
+    --light-text: #f5faff;         /* Light text color */
+    --text-color: #1f2937;         /* Base text color */
+    --accent-color: #18a0fb;       /* Accent color for links and buttons */
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: var(--dark-color);
+    color: var(--light-text);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px var(--card-shadow);
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.nav-links a {
+    margin-left: 1.5rem;
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: var(--light-text);
+    padding: 3rem 0;
+}
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-text {
+    flex: 1 1 480px;
+    padding-right: 2rem;
+}
+.hero-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.hero-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+.hero-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+/* Search bar */
+#search-form {
+    margin-top: 1rem;
+}
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Section titles */
+.section-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 0.5rem;
+}
+
+/* Card grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Individual card */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px var(--card-shadow);
+}
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.card p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.card a {
+    align-self: flex-start;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+.card a:hover {
+    background-color: var(--accent-color);
+}
+
+/* About section */
+#about p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+    }
+}

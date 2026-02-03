@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Statistics & AI Learning Hub</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title">統計 & AI 学習ハブ</h1>
+            <nav class="nav-links">
+                <a href="#statistics">統計</a>
+                <a href="#ai">AI</a>
+                <a href="#about">サイトについて</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h2>統計学 &amp; 人工知能の旅へようこそ</h2>
+                <p>このサイトでは、統計とAIに関する学習トピックを一覧し、理解を深めるためのリソースをまとめています。</p>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="トピックを検索..." aria-label="トピックを検索">
+                </form>
+            </div>
+            <div class="hero-image">
+                <!-- Use the generated hero image -->
+                <img src="39447b28-0d32-4371-aa93-94180b3bb610.png" alt="AI and statistics abstract hero" />
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Section for Statistics topics -->
+        <section id="statistics">
+            <h2 class="section-title">統計</h2>
+            <div class="card-grid" id="statistics-grid">
+                <!-- Cards will be injected here by JavaScript -->
+            </div>
+        </section>
+        <!-- Section for AI topics -->
+        <section id="ai">
+            <h2 class="section-title">AI</h2>
+            <div class="card-grid" id="ai-grid">
+                <!-- Cards will be injected here by JavaScript -->
+            </div>
+        </section>
+        <!-- About section -->
+        <section id="about">
+            <h2 class="section-title">サイトについて</h2>
+            <p>
+                このホームページは、統計学やAIの理解を深めたい学習者のために作成されました。<br />
+                トピックは随時追加できます。もし追加してほしい内容があれば、data.json に項目を追加して
+                更新してください。
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to load data and handle search -->
+    <script src="script.js"></script>
+</body>
+</html>
