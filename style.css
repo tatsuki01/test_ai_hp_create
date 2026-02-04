@@ -9,6 +9,106 @@
     --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
+/*
+ * Typography improvements
+ *
+ * Increase readability by adding generous line spacing and margins
+ * for paragraphs, headings and lists. These styles ensure that
+ * text isn't crammed together on long pages, making the content
+ * easier to scan and understand at a glance.
+ */
+article h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+article p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+    font-size: 1rem;
+}
+article ul,
+article ol {
+    margin: 0 0 1.2rem 1.5rem;
+    padding-left: 1rem;
+    line-height: 1.7;
+}
+article li {
+    margin-bottom: 0.6rem;
+}
+
+/*
+ * Table styling
+ *
+ * Define a consistent appearance for tables used across the site. By
+ * setting a full width, collapsed borders, subtle zebra striping and
+ * padding on cells, tables become easier to read and the content
+ * remains aligned even on smaller screens. The `.table-small` class
+ * reduces font size for compact tables.
+ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+table th,
+table td {
+    border: 1px solid #e2e8f0;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    vertical-align: top;
+}
+table thead {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+}
+table tbody tr:nth-child(even) {
+    background-color: #f9fbff;
+}
+.table-small th,
+.table-small td {
+    font-size: 0.95rem;
+}
+
+/*
+ * Callout boxes
+ *
+ * The `.note` and `.example` classes allow pages to draw attention
+ * to particular concepts or examples. They use a colored border and
+ * subtle background to stand out from regular paragraphs. The
+ * heading inside a callout is styled to have no top margin.
+ */
+.note,
+.example {
+    border-left: 4px solid var(--primary-color);
+    background-color: #f5faff;
+    padding: 1rem 1rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+.note h4,
+.example h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/*
+ * Math text styling
+ *
+ * To differentiate mathematical expressions from body text, the
+ * `.math` class uses a monospace-like font and a slightly darker
+ * color. This avoids needing external libraries like MathJax.
+ */
+.math {
+    font-family: 'Courier New', Courier, monospace;
+    color: #0b5394;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

@@ -28,11 +28,28 @@
             <p>確率論では、まず起こり得るすべての結果からなる集合を<strong>標本空間</strong>と呼び、その部分集合を<strong>事象</strong>と呼びます。標本空間内の事象にどれだけの確率が割り当てられるかを考えることで、現象の不確実さを数量化します。また、結果に数値を対応させたものを<strong>確率変数</strong>といいます。</p>
 
             <h3>期待値と分散</h3>
-            <p>確率変数 <em>X</em> の<strong>期待値</strong>は、取る可能性のある値とその確率の積の総和で定義されます。離散的な場合、期待値は <span class="math">E[X] = \sum_i x_i p_i</span> で与えられます。これは変数の平均的な値を表します。</p>
-            <p>一方、<strong>分散</strong>は期待値からのばらつきを示し、<span class="math">Var(X) = E[(X-\mu)^2]</span> で定義されます。分散の平方根は標準偏差と呼ばれ、データの散らばり具合を直感的に把握するのに便利です。</p>
+            <p>確率変数 <em>X</em> の<strong>期待値</strong>は、各取り得る値とその確率の積の総和として定義されます。離散型の確率変数の場合、期待値は次のように書けます。</p>
+            <div class="note">
+                <h4>期待値の定義</h4>
+                <p class="math">E[X] = \sum (x_i\, p_i)</p>
+                <p>ここで <em>x<sub>i</sub></em> は変数がとる値、<em>p<sub>i</sub></em> はその確率を表します。</p>
+            </div>
+            <p>これは確率変数の平均的な値を示し、データの中心傾向を把握するために用いられます。</p>
+            <p>一方、<strong>分散</strong>は期待値からのばらつきを示す指標で、次式で定義されます。</p>
+            <div class="note">
+                <h4>分散の定義</h4>
+                <p class="math">Var(X) = E[(X - \mu)^2]</p>
+                <p>ここで \(\mu = E[X]\) は期待値です。分散の平方根は<strong>標準偏差</strong>と呼ばれ、データの散らばり具合を直感的に把握するのに便利です。</p>
+            </div>
 
             <h3>代表的な確率分布</h3>
-            <p>統計学ではさまざまな確率分布を用います。例えば、ベル型の曲線で知られる<strong>正規分布</strong>は、中心極限定理により多くの自然現象の誤差や平均値の分布を表すのに適しています。また、成功・失敗の2値データを扱う<strong>二項分布</strong>や、ある期間に起こる事象の回数を表す<strong>ポアソン分布</strong>などがあり、大学の統計学の講義では組合せ、確率定義、条件付き確率、二項分布や正規分布など基礎的な概念から学びます。</p>
+            <p>統計学ではさまざまな確率分布を用います。ここでは代表的な分布をいくつか挙げます。</p>
+            <ul>
+                <li><strong>正規分布</strong>: ベル型の曲線で知られ、中心極限定理により測定誤差や平均値の分布を表すのに適します。</li>
+                <li><strong>二項分布</strong>: 成功・失敗の2値データを扱い、独立な試行を一定回数繰り返したときの成功回数の分布です。</li>
+                <li><strong>ポアソン分布</strong>: 単位時間内に起こる希少な事象の回数を表すときに用います。</li>
+            </ul>
+            <p>大学の統計学の講義では、このような確率分布に加えて組合せ、条件付き確率、中心極限定理などの基礎概念を学びます。</p>
 
             <figure>
                 <img src="assets/normal_distribution.png" alt="標準正規分布" />
@@ -47,9 +64,9 @@
                 <tbody>
                     <tr><td>期待値</td><td>E[X]</td><td>確率変数の平均的な値</td></tr>
                     <tr><td>分散</td><td>Var(X) = E[(X-\mu)^2]</td><td>ばらつきの指標</td></tr>
-                    <tr><td>正規分布</td><td>\(f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\)</td><td>平均\(\mu\)、分散\(\sigma^2\) をもつ連続分布</td></tr>
-                    <tr><td>二項分布</td><td>\(P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}\)</td><td>成功回数\(k\)の確率。試行回数\(n\)、成功確率\(p\)。</td></tr>
-                    <tr><td>ポアソン分布</td><td>\(P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!}\)</td><td>単位時間内の事象発生回数。平均発生率\(\lambda\)。</td></tr>
+                    <tr><td>正規分布</td><td class="math">f(x)=\frac{1}{\sqrt{2\pi}\,\sigma}\,\exp\left[-\frac{(x-\mu)^2}{2\sigma^2}\right]</td><td>平均 <span class="math">\mu</span>、分散 <span class="math">\sigma^2</span> をもつ連続分布</td></tr>
+                    <tr><td>二項分布</td><td class="math">P(X=k)=C(n,k)\,p^{\,k}(1-p)^{n-k}</td><td>成功回数 <span class="math">k</span> の確率。試行回数 <span class="math">n</span>、成功確率 <span class="math">p</span>。</td></tr>
+                    <tr><td>ポアソン分布</td><td class="math">P(X=k)=\frac{\lambda^k\,e^{-\lambda}}{k!}</td><td>単位時間内の事象発生回数。平均発生率 <span class="math">\lambda</span>。</td></tr>
                 </tbody>
             </table>
 
