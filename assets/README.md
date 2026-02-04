@@ -1,0 +1,3 @@
+This directory contains image assets used by the website's internal topic pages.  
+The images are generated dynamically with Python's matplotlib and stored here as static resources.  
+They illustrate concepts such as normal distribution, regression lines, hypothesis test regions, neural network diagrams, SVM margins, reinforcement learning diagrams, PCA principal axes, and deep learning application charts.
