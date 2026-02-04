@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>分散 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+                <a href="dictionary.html">辞書</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <article>
+            <h2 class="section-title">分散</h2>
+            <p>分散は、確率変数がその平均からどれだけ離れているか（ばらつき）を表す指標です。期待値だけではデータの散らばり具合を表せないため、分散が用いられます。</p>
+            <div class="note">
+                <h4>分散の定義</h4>
+                <p class="math">Var(X) = E[(X - \mu)^2]</p>
+                <p>ここで \(\mu = E[X]\) は期待値です。分散は平均からの偏差の 2 乗の期待値として定義されます。</p>
+            </div>
+            <p>分散の平方根を<strong>標準偏差</strong>と呼び、データの散らばりを元の単位で表すのに便利です。</p>
+            <p>詳しくは <a href="probability.html">確率論の基礎</a> のページを参照してください。</p>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

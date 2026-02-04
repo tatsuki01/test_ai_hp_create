@@ -54,10 +54,15 @@ function renderCards(data) {
         // Create card element
         const card = document.createElement('div');
         card.className = 'card';
+        // 外部リンクの場合のみ別タブで開く
+        const isExternal = /^https?:\/\//i.test(item.link);
+        const linkAttrs = isExternal
+            ? `href="${item.link}" target="_blank" rel="noopener noreferrer"`
+            : `href="${item.link}"`;
         card.innerHTML = `
             <h3>${item.title}</h3>
             <p>${item.description}</p>
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer">もっと詳しく</a>
+            <a ${linkAttrs}>もっと詳しく</a>
         `;
         // Append to correct grid based on category
         if (item.category.toLowerCase() === 'statistics') {

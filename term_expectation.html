@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>期待値 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+                <a href="dictionary.html">辞書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">期待値</h2>
+            <p>期待値は、確率変数が取り得る値とその確率の重み付き平均として定義されます。離散型の場合、各値 \(x_i\) とその確率 \(p_i\) の積を足し合わせることで求められます。</p>
+            <div class="note">
+                <h4>期待値の定義</h4>
+                <p class="math">E[X] = \sum_i x_i p_i</p>
+                <p>ここで <em>x<sub>i</sub></em> は確率変数の取り得る値、<em>p<sub>i</sub></em> はその確率を表します。</p>
+            </div>
+            <p>期待値はデータの「中心」を表す指標であり、確率論の基本概念としてさまざまな統計手法で利用されます。</p>
+            <p>詳しくは <a href="probability.html">確率論の基礎</a> のページを参照してください。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

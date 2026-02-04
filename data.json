@@ -47,4 +47,23 @@
         "category": "AI",
         "link": "deep_learning.html"
     }
+
+    ,{
+        "title": "ベイズ統計入門",
+        "description": "事前分布と事後分布を用いて不確実なパラメータを推定する手法を紹介します。",
+        "category": "Statistics",
+        "link": "bayesian.html"
+    }
+    ,{
+        "title": "統計的推定と最尤法",
+        "description": "パラメータ推定の概念と最尤法の仕組みや特徴を学びます。",
+        "category": "Statistics",
+        "link": "mle.html"
+    }
+    ,{
+        "title": "クラスタリングと K-means",
+        "description": "教師なし学習であるクラスタリングと代表的なアルゴリズム K-means について解説します。",
+        "category": "AI",
+        "link": "kmeans.html"
+    }
 ]

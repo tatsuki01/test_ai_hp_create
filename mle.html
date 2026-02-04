@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>統計的推定と最尤法 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+                <a href="dictionary.html">辞書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">統計的推定と最尤法</h2>
+            <p>統計的推定では、観測されたデータから未知の母数を推定します。推定方法には点推定と区間推定があり、前者はパラメータの具体的な値を与え、後者はその値が含まれる区間を示します。本節では広く用いられる<strong>最尤法</strong>について紹介します。</p>
+
+            <h3>最尤法の枠組み</h3>
+            <p>最尤法では、データをある確率分布の観測値と考えます。母数が取り得る値の集合を<strong>パラメータ空間</strong>と呼びます。データが与えられたとき、そのデータが観測される尤度（確率）を関数として母数の関数にしたものを<strong>尤度関数</strong>といいます【306498082253122†L61-L95】。この尤度関数を最大にする母数を<strong>最尤推定量</strong>（MLE）と呼びます。</p>
+
+            <div class="note">
+                <h4>最尤推定量の定義</h4>
+                <p class="math">\hat{\theta}_{\mathrm{MLE}} = \arg\max_{\theta \in \Theta} L(\theta; D)</p>
+                <p>ここで \(L(\theta; D)\) はパラメータ \(\theta\) の下でデータ \(D\) が観測される尤度です。尤度が最大になる \(\theta\) が最尤推定値です。</p>
+            </div>
+
+            <h3>尤度曲線の例</h3>
+            <p>2項分布を例に考えます。10 回の試行で表が 7 回出たとすると、表の確率 \(p\) に対する尤度関数は次のようになります。下図では尤度曲線と最尤推定値 \(\hat{p}\) を示しています。</p>
+            <figure>
+                <img src="assets/mle_likelihood.png" alt="最尤推定の尤度曲線" />
+                <figcaption>図1: 二項分布（n=10, k=7）における尤度曲線。点線は最尤推定値 \(\hat{p}=0.7\) を示す。</figcaption>
+            </figure>
+
+            <h3>最尤法の特徴</h3>
+            <ul>
+                <li><strong>広範に適用可能</strong> – 正規分布や指数分布、ポアソン分布など多くの確率モデルに対して容易に適用できます。</li>
+                <li><strong>良い統計的性質</strong> – MLE はサンプルサイズが大きくなると真の母数に近づく（<em>一致性</em>）や、分散が小さい（<em>効率性</em>）などの性質を持ちます。</li>
+                <li><strong>計算のしやすさ</strong> – 対数尤度を最大化することで解析的または数値的に解くことができ、多くの統計ソフトウェアで実装されています。</li>
+            </ul>
+
+            <p>最尤法はその単純さと一般性から、統計モデリングや機械学習の多くの手法の基盤となっています。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

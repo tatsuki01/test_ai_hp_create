@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用語辞典 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+                <a href="dictionary.html">辞書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">用語辞典</h2>
+            <p>この辞書では、記事内に登場するキーワードを簡潔に説明します。用語をクリックすると詳細な定義ページに移動します。</p>
+            <table class="table-small">
+                <thead>
+                    <tr><th>用語</th><th>概要</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><a href="term_expectation.html">期待値</a></td><td>確率変数の平均的な値</td></tr>
+                    <tr><td><a href="term_variance.html">分散</a></td><td>データのばらつきを表す指標</td></tr>
+                    <tr><td><a href="term_normal_distribution.html">正規分布</a></td><td>平均と分散で定まる鐘形の連続分布</td></tr>
+                    <tr><td><a href="term_bayesian.html">ベイズ統計</a></td><td>事前情報とデータを組み合わせて推定する統計手法</td></tr>
+                    <tr><td><a href="term_prior.html">事前分布</a></td><td>ベイズ推定におけるパラメータの初期分布</td></tr>
+                    <tr><td><a href="term_posterior.html">事後分布</a></td><td>データを観測後に更新されたパラメータ分布</td></tr>
+                    <tr><td><a href="term_mle.html">最尤法</a></td><td>尤度を最大にするパラメータ推定法</td></tr>
+                    <tr><td><a href="term_clustering.html">クラスタリング</a></td><td>データを似たもの同士のグループに分ける手法</td></tr>
+                    <tr><td><a href="term_cluster.html">クラスター</a></td><td>クラスタリングによって得られるデータ点の集まり</td></tr>
+                    <tr><td><a href="term_kmeans.html">K-means</a></td><td>k 個のクラスタにデータを分けるアルゴリズム</td></tr>
+                    <tr><td><a href="term_svm.html">サポートベクターマシン</a></td><td>マージンを最大化する分類アルゴリズム</td></tr>
+                    <tr><td><a href="term_neural_network.html">ニューラルネットワーク</a></td><td>多層のニューロンからなる計算モデル</td></tr>
+                    <tr><td><a href="term_reinforcement.html">強化学習</a></td><td>報酬を最大化するよう行動を学習する手法</td></tr>
+                    <tr><td><a href="term_pca.html">主成分分析</a></td><td>データをより少ない次元に圧縮する手法</td></tr>
+                    <tr><td><a href="term_deep_learning.html">ディープラーニング</a></td><td>多層ニューラルネットワークによる学習手法</td></tr>
+                </tbody>
+            </table>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

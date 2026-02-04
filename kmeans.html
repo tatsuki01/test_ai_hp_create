@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クラスタリングと K-means | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+                <a href="dictionary.html">辞書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">クラスタリングと K-means</h2>
+            <p>クラスタリングは、ラベル付けされていないデータを似たもの同士のグループ（<strong>クラスター</strong>）に分ける教師なし学習の代表的な手法です。データ構造を理解したり、パターンを発見したりするときに役立ちます。</p>
+
+            <h3>K-means アルゴリズム</h3>
+            <p>K-means は最も広く利用されているクラスタリングアルゴリズムの一つで、次の手順で進められます【218594228836132†L27-L54】。</p>
+            <ol>
+                <li>あらかじめ決めたクラスター数 <em>k</em> 個の<strong>重心</strong>（クラスタ中心）をランダムに初期化する。</li>
+                <li>各データ点を、最も近い重心を持つクラスターに割り当てる。</li>
+                <li>各クラスターのデータ点の平均を計算し、新しい重心とする。</li>
+                <li>重心がほとんど移動しなくなるまで 2–3 を繰り返す。</li>
+            </ol>
+
+            <div class="example">
+                <h4>K-means の用途</h4>
+                <ul>
+                    <li>ユーザーや顧客のセグメンテーション</li>
+                    <li>画像の色数削減や圧縮</li>
+                    <li>異常検知やアウトライアの発見</li>
+                    <li>文書やニュース記事のクラスタリング</li>
+                </ul>
+            </div>
+
+            <h3>クラスタリング例</h3>
+            <p>下図は、人工的に生成した 2 次元データを K-means で 3 つに分類した例です。各色が異なるクラスターを表し、黒い「X」が各クラスターの中心を示しています。</p>
+            <figure>
+                <img src="assets/kmeans_example.png" alt="K-means クラスタリングの例" />
+                <figcaption>図1: K-means クラスタリングによるデータの分割とクラスタ中心。</figcaption>
+            </figure>
+
+            <p>K-means は効率的で解釈もしやすい一方、クラスター数 <em>k</em> を事前に決める必要があり、初期値によって結果が変わることがあります。このため、複数の初期化を試行したり、適切な <em>k</em> を選択するためにエルボー法などを用います。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ベイズ統計入門 | 統計 & AI 学習ハブ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html" style="text-decoration:none;color:inherit;">統計 & AI 学習ハブ</a></h1>
+            <nav class="nav-links">
+                <a href="index.html#statistics">統計一覧</a>
+                <a href="index.html#ai">AI一覧</a>
+                <a href="dictionary.html">辞書</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2 class="section-title">ベイズ統計入門</h2>
+            <p>ベイズ統計は、<strong>事前情報</strong>と観測データを組み合わせて不確実なパラメータを推定するための枠組みです。頻度主義的な統計学とは異なり、パラメータそのものを確率変数として扱い、主観的な信念を確率で表現します。</p>
+
+            <h3>ベイズ統計の概念</h3>
+            <p>ベイズ統計では、パラメータに対して<strong>事前分布</strong>と呼ばれる確率分布を割り当てます。これは推定するパラメータに対する私たちの先入観や知識を表します【897447307761742†L10-L18】。観測データが得られたら、ベイズの定理を用いてこの事前分布を更新し、新しい分布（<strong>事後分布</strong>）を得ます【897447307761742†L165-L169】。事後分布はパラメータがどの値をとるかについての最新の信念を表現します。</p>
+
+            <div class="note">
+                <h4>ベイズの定理</h4>
+                <p>ベイズの定理は次のように書けます：</p>
+                <p class="math">p(\theta \mid D) \propto p(D \mid \theta)\, p(\theta)</p>
+                <p>ここで \(p(\theta)\) は事前分布、\(p(D \mid \theta)\) はデータの尤度、\(p(\theta \mid D)\) は事後分布です。データが与えられたときに、事前分布とデータの尤度を掛けることで事後分布が求められます。</p>
+            </div>
+
+            <h3>ベイズ統計の特徴と利点</h3>
+            <ul>
+                <li><strong>事前情報を取り込める</strong> – 過去の研究や専門家の知見を事前分布として組み込めるため、データが少ない場合でも推定が可能です。</li>
+                <li><strong>パラメータの不確実性を表現</strong> – パラメータの点推定だけでなく、分布全体（事後分布）を得られるので、<em>信用区間</em>などの区間推定が自然に得られます。</li>
+                <li><strong>データの追加に柔軟</strong> – 新しいデータが得られたら、事後分布を次の事前分布として更新するだけで簡単に推定を更新できます。</li>
+            </ul>
+
+            <h3>例：コイン投げにおける推定</h3>
+            <p>コインが表になる確率 \(\theta\) を推定するとします。事前分布として一様分布 \(\mathrm{Beta}(1,1)\) を設定し、7回表、2回裏が出たデータを観測したとすると、事後分布は \(\mathrm{Beta}(8,3)\) になります。下図は事前分布と事後分布の比較を示しています。</p>
+            <figure>
+                <img src="assets/bayesian_beta.png" alt="事前分布と事後分布のベータ分布の例" />
+                <figcaption>図1: ベータ分布による事前分布（青）と事後分布（赤）。データを観測することで分布が更新される様子がわかります。</figcaption>
+            </figure>
+
+            <p>このように、ベイズ統計では分布全体を扱うことで、推定値の不確実性や信頼範囲を明示的に評価できます。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> 統計 &amp; AI 学習ハブ</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
